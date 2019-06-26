@@ -1,0 +1,9 @@
+controller\GitLabController.class
+controller\GitApplication.class
+controller\GitController.class
+service\GitService.class
+controller\GitHubController.class
+controller\GitRepositoryController.class
+enums\GitSource.class
+controller\GitController$1.class
+model\GitRepositoryResponse.class
