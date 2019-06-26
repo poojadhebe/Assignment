@@ -2,6 +2,8 @@ package controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import enums.GitSource;
 import model.GitRepositoryResponse;
 /**
@@ -9,8 +11,11 @@ import model.GitRepositoryResponse;
  * @author pdhebe
  */
 public class GitLabController extends GitController {
+	@Value("{gitlab.url}")
 	private String gitLabURL = "https://gitlab.com/api/v4/users/";
+	@Value("{gitlab.repo.path}")
 	private String gitLabRepoPath = "/projects";
+	@Value("{gitlab.owner.path}")
 	private String gitLabOwnerPath = "?owned=1";
 
 	/**
