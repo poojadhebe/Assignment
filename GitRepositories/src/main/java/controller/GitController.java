@@ -30,7 +30,7 @@ public class GitController {
 			ResponseEntity<List<GitRepositoryResponse>> gitRepositoryResponseList = (ResponseEntity<List<GitRepositoryResponse>>) restTemplate
 					.exchange(URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<GitRepositoryResponse>>() {
 					});
-			gitRepositoryResponseList.getBody().stream().forEach(response -> response.setGitType(gitType));
+			gitRepositoryResponseList.getBody().stream().forEach(response -> response.setGitSource(gitType));
 			return gitRepositoryResponseList.getBody();
 		} catch (HttpClientErrorException ex) {
 			log.info("Projects not found in " + gitType);

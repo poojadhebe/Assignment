@@ -1,9 +1,13 @@
 package model;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import enums.GitSource;
+
 /**
- * This class represents the response which will contain the project information fetched from GitHub and GitLab based on name and ownership property.
+ * This class represents the response which will contain the project information
+ * fetched from GitHub and GitLab based on name and ownership property.
+ * 
  * @author pdhebe
  *
  */
@@ -11,7 +15,6 @@ import enums.GitSource;
 public class GitRepositoryResponse {
 	String name;
 	GitSource gitSource;
-
 	/**
 	 * @return the name
 	 */
@@ -30,15 +33,16 @@ public class GitRepositoryResponse {
 	/**
 	 * @return the gitSource
 	 */
-	public GitSource getGitType() {
+	public GitSource getGitSource() {
 		return gitSource;
 	}
 
 	/**
-	 * @param gitSource the gitSource to set
+	 * @param gitSource
+	 *            the gitSource to set
 	 */
-	public void setGitType(GitSource gitType) {
-		this.gitSource = gitType;
+	public void setGitSource(GitSource gitSource) {
+		this.gitSource = gitSource;
 	}
 
 	/*
@@ -50,7 +54,8 @@ public class GitRepositoryResponse {
 		builder.append("GitRepositoryResponse [name=");
 		builder.append(name);
 		builder.append(", gitSource=");
-		builder.append(gitSource.toString());
+		builder.append(gitSource);
+
 		builder.append("]");
 		return builder.toString();
 	}
