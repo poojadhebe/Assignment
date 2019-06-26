@@ -35,8 +35,7 @@ public class GitService {
  * @param name
  * @param owned
  */
-	public void getGitProjects(GitSource gitSource, String name, boolean owned) {
-		List<GitRepositoryResponse> gitResponsesList = new ArrayList<GitRepositoryResponse>();
+	public void getGitProjects(GitSource gitSource, String name, boolean owned) {		
 		if (GitSource.GIT_HUB.equals(gitSource)) {
 			GitHubController gitHubController = new GitHubController();
 			List<GitRepositoryResponse> gitHubResponseList = gitHubController.fetchGitHubProjects(name, owned);
