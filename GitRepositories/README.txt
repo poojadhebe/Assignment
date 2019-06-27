@@ -1,3 +1,5 @@
+Objective: To search for given user's projects on GitHub and GitLab. 
+
 In order to run this application, you have to follow following steps on cmd.
 Steps:
 1) Go to project directory and run foll command
