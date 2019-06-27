@@ -8,3 +8,8 @@ java -jar target/gs-rest-service-0.1.0.jar
 http://localhost:8080/projects?name=poojadhebe&owned=true
 
 Note:The name attribute denotes the username of whom you want to view the projects. The owned attribute is optional.
+
+
+Prerequisites:
+1. JDK 1.8
+2. Maven 3.6.1
